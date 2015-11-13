@@ -14,12 +14,11 @@
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 
-        <link rel="import"
-              href="bower_components/paper-header-panel/paper-header-panel.html">
-        <link rel="import"
-              href="bower_components/paper-toolbar/paper-toolbar.html">
-        <link rel="import"
-              href="bower_components/iron-flex-layout/iron-flex-layout.html">
+        <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+        <link rel="import" href="bower_components/paper-header-panel/paper-header-panel.html">
+        <link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
+        <link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html">
+        <link rel="import" href="bower_components/paper-card/paper-card.html">
     </head>
     <body class="fullbleed vertical layout">
         <!--[if lt IE 8]>
@@ -30,7 +29,32 @@
             <paper-toolbar>
                 <div>Header</div>
             </paper-toolbar>
-            <div>Content</div>
+
+            <!--Content-->
+            <div class="vertical layout" style="height:250px">
+
+                <div>
+                    <!-- User Area-->
+                    <paper-card heading="Card Title">
+                        <div class="card-content">Some content</div>
+                        <div class="card-actions">
+                            <paper-button>Some action</paper-button>
+                        </div>
+                    </paper-card>
+                </div>
+
+                <div> <!--add padding to div-->
+                    <!-- Test Card-->
+                    <paper-card heading="Card Title">
+                        <div class="card-content">Some content</div>
+                        <div class="card-actions">
+                            <paper-button>Some action</paper-button>
+                        </div>
+                    </paper-card>
+                </div>
+
+
+            </div>
         </paper-header-panel>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

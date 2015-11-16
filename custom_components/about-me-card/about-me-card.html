@@ -1,27 +1,70 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../../bower_components/iron-image/iron-image.html">
 
 <dom-module id="about-me-card">
 
     <style>
-        .card-container {
+
+        .container {
+            padding: 2rem;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
+        .avatar-container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .snippet-heading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .snippet-body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 500px;
+        }
+
     </style>
 
+
     <template>
-        <div class="card-container">
-            <!-- User Area-->
-            <paper-card heading="Card Title">
-                <div class="card-content">Some content</div>
+        <div class="container">
+            <paper-card heading="" elevation="2">
+                <div class="card-content">
+                    <div class="avatar-container">
+
+                        <div class="avatar">
+                            <iron-image src="https://pbs.twimg.com/profile_images/493592407649181698/Oty-F30e.jpeg"
+                                        style="width:100px; height:100px; border-radius: 50%;"
+                                        sizing="cover">
+                            </iron-image>
+                        </div>
+
+                    </div>
+
+                    <div class="snippet-heading">
+                        <h1>Hello! I'm Kris</h1>
+                    </div>
+                    <div class="snippet-body">
+                        <p>
+                            Bacon ipsum dolor amet salami swine drumstick landjaeger cow pork kielbasa short ribs kevin filet mignon flank frankfurter tenderloin fatback. Sirloin biltong pancetta landjaeger shankle. Tongue pancetta landjaeger ball tip. Ham turkey biltong pork chop pancetta flank, brisket tongue spare ribs bresaola bacon jowl short ribs beef ribs. Salami cow alcatra, tail t-bone jowl kielbasa ground round short loin kevin. Jowl venison spare ribs, landjaeger alcatra sirloin beef picanha ribeye pork chop chuck.
+                        </p>
+                    </div>
+                </div>
                 <div class="card-actions">
                     <paper-button>Some action</paper-button>
                 </div>
             </paper-card>
         </div>
+
+
     </template>
 
 </dom-module>
@@ -31,7 +74,6 @@
         is: "about-me-card",
 
         ready: function(){
-            alert("here");
         }
 
 

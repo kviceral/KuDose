@@ -1,0 +1,39 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-card/paper-card.html">
+
+<dom-module id="about-me-card">
+
+    <style>
+        .card-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+    </style>
+
+    <template>
+        <div class="card-container">
+            <!-- User Area-->
+            <paper-card heading="Card Title">
+                <div class="card-content">Some content</div>
+                <div class="card-actions">
+                    <paper-button>Some action</paper-button>
+                </div>
+            </paper-card>
+        </div>
+    </template>
+
+</dom-module>
+
+<script>
+    Polymer({
+        is: "about-me-card",
+
+        ready: function(){
+            alert("here");
+        }
+
+
+    });
+</script>

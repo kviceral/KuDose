@@ -1,0 +1,119 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../../bower_components/iron-image/iron-image.html">
+<link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../../bower_components/iron-icons/communication-icons.html">
+
+<dom-module id="kudos-list">
+
+    <style>
+
+        .container {
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .kudos-item {
+            max-width: 600px;
+        }
+
+        .card-content {
+            @apply(--layout-horizontal);
+            @apply(--layout-flex);
+        }
+
+        .contact-actions {
+            display: flex;
+        }
+
+        .contact-action-item {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .kudos-item-actions {
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: row;
+            flex-direction: row;
+            -webkit-justify-content: flex-end;
+            justify-content: flex-end;
+        }
+
+        .avatar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .comment-container {
+            @apply(--layout-vertical);
+            @apply(--layout-flex);
+            align-items: center;
+            justify-content: center;
+        }
+
+    </style>
+
+
+    <template>
+        <div class="container">
+
+            <div class="kudos-item">
+                <paper-card heading="" elevation="2">
+                    <div class="card-content">
+                        <div class="avatar">
+                            <iron-image src="https://randomuser.me/api/portraits/thumb/men/10.jpg"
+                                        style="width:100px; height:100px; border-radius: 50%;"
+                                        sizing="cover">
+                            </iron-image>
+                        </div>
+                        <div class="comment-container">
+
+                            <p>
+                                <strong>Kevin Durant:</strong>
+                                Bacon ipsum dolor amet tail t-bone andouille ribeye, flank pancetta ball tip biltong. Shankle sirloin tri-tip, ball tip kevin strip steak doner ribeye jowl cow leberkas pork belly.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <div class="contact-actions">
+
+                            <div class="contact-action-item">
+                                <paper-button elevation="2" raised="true">
+                                    <iron-icon icon="communication:email"></iron-icon>
+                                    kevin@durant.com
+                                </paper-button>
+                            </div>
+                            <div class="contact-action-item">
+                                <paper-button>
+                                    <iron-icon icon="communication:call"></iron-icon>
+                                    123-456-7891
+                                </paper-button>
+                            </div>
+                        </div>
+                    </div>
+                </paper-card>
+            </div>
+
+        </div>
+
+
+    </template>
+
+</dom-module>
+
+<script>
+    Polymer({
+        is: "kudos-list",
+
+        ready: function(){
+        }
+
+
+    });
+</script>
